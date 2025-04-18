@@ -7,7 +7,7 @@
 //
 # Tools I Used
 //
-
+<br>
 ### 📌 Skill Demand by Job Title
 
 **Question:**  
@@ -91,7 +91,7 @@ ORDER BY job_title_short, perc DESC;
 
 **Filtered to:** `Data Analyst`
 
-<img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:80%; height:auto;" />
+<img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:70%; height:auto;" />
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/686ab25a1d8542ec8e5d259c4f22440b1624fb9d/Job%20Analysis%20Prep/Demand_Percentage.sql)*
 <br>
@@ -203,8 +203,8 @@ ORDER BY job_title_short, month_posted;
 </details>
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Skill_Demand_over_Time.sql)*
-
-
+<br>
+<br>
 ### 📌 Average Salary by Skill
 
 **Question:**  
@@ -268,8 +268,8 @@ ORDER BY job_title_short, avg_salary DESC;
 </details>
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/AVG_Salary_Per_Skill.sql)*
-
-
+<br>
+<br>
 ### 📌 Remote and Degree Requirement Percentages
 
 **Question:**  
@@ -369,8 +369,8 @@ ORDER BY job_title_short, category;
 </details>
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Remote_and_degree_PCT.sql)*
-
-
+<br>
+<br>
 ### 📌 Average and Median Salary by Job Title
 
 **Question:**  
