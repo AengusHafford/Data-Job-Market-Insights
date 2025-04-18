@@ -8,7 +8,6 @@
 # Tools I Used
 //
 
-
 ### 📌 Skill Demand by Job Title
 
 **Question:**  
@@ -95,8 +94,8 @@ ORDER BY job_title_short, perc DESC;
 <img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:80%; height:auto;" />
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/686ab25a1d8542ec8e5d259c4f22440b1624fb9d/Job%20Analysis%20Prep/Demand_Percentage.sql)*
-
-
+<br>
+<br>
 ### 📌 Skill Demand Over Time
 
 
