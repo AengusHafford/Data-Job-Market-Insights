@@ -202,6 +202,9 @@ ORDER BY job_title_short, month_posted;
 
 </details>
 
+**Filtered to:** `Data Analyst`
+<img src="Assets/Chart_Skill_Demand_Time.png" alt="Skill Demand Over Time Chart" style="max-width:70%; height:auto;" />
+
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Skill_Demand_over_Time.sql)*
 <br>
 <br>
@@ -266,6 +269,9 @@ ORDER BY job_title_short, avg_salary DESC;
 | All Postings    | Python   | 132000     |
 
 </details>
+
+**Filtered to:** `Data Analyst`
+<img src="Assets/Chart_AVG_Skill_Salary.png" alt="Average Salary by Skill Chart" style="max-width:70%; height:auto;" />
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/AVG_Salary_Per_Skill.sql)*
 <br>
