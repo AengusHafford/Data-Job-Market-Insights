@@ -373,6 +373,11 @@ ORDER BY job_title_short, category;
 | All Postings     | Degree Required      | 7001   | 74.73 |
 | All Postings     | No Degree Required   | 2371   | 25.27 |
 </details>
+**Filtered to:** `Data Analyst`
+
+<img src="Assets/Chart_Degree_PCT.png" alt="Degree Requirement Percentages" style="max-width:70%; height:auto;" />
+
+<img src="Assets/Chart_Remote_PCT.png" alt="Remote Job Percentages" style="max-width:70%; height:auto;" />
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Remote_and_degree_PCT.sql)*
 <br>
