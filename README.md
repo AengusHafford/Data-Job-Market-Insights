@@ -373,6 +373,7 @@ ORDER BY job_title_short, category;
 | All Postings     | Degree Required      | 7001   | 74.73 |
 | All Postings     | No Degree Required   | 2371   | 25.27 |
 </details>
+
 **Filtered to:** `Data Analyst`
 
 <img src="Assets/Chart_Degree_PCT.png" alt="Degree Requirement Percentages" style="max-width:70%; height:auto;" />
