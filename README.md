@@ -444,8 +444,9 @@ This visualization blends outputs from the following queries:
 - 📌 *[Average Salary by Skill](#📌-average-salary-by-skill)*  
 It was created directly in Tableau and does not use a standalone SQL file.
 
-**Filtered to:** `Data Analyst`  
-<img src="Assets/Chart_Salary_vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" />
+**Filtered to:** `Data Analyst`
+
+<img src="Assets/Chart_Salary_Vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" />
 
 # What I learned
 //
