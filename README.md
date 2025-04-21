@@ -452,8 +452,7 @@ It was created directly in Tableau and does not use a standalone SQL file.
 **Filtered to:** `Data Analyst`
 
 <img src="Assets/Chart_Salary_Vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" />
-
-*Scatter plot mapping average salary against percentage of Data Analyst job postings each skill appears in.*
+<em>Scatter plot mapping average salary against percentage of Data Analyst job postings each skill appears in.</em></p>
 
 # What I learned
 //
