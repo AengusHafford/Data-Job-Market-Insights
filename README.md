@@ -448,6 +448,7 @@ It was created directly in Tableau and does not use a standalone SQL file.
 
 <img src="Assets/Chart_Salary_Vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" />
 
+
 # What I learned
 //
 # Conclusions
