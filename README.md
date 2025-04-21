@@ -379,7 +379,8 @@ ORDER BY job_title_short, category;
 
 **Filtered to:** `Data Analyst`
 <img src="Assets/Chart_Degree_PCT.png" alt="Degree Requirement Percentages" style="max-width:70%; height:auto;" />
-*Chart showing percentage of postings that mention degree requirements vs. those that do not — for Data Analysts.*
+*Bar chart showing percentage of postings that mention degree requirements vs. those that do not — for Data Analysts.*
+<br>
 <img src="Assets/Chart_Remote_PCT.png" alt="Remote Job Percentages" style="max-width:70%; height:auto;" />
 *Bar chart showing the share of remote vs. non-remote postings - for Data Analysts.*
 
@@ -447,6 +448,7 @@ This visualization blends outputs from the following queries:
 It was created directly in Tableau and does not use a standalone SQL file.
 
 **Filtered to:** `Data Analyst`
+
 <img src="Assets/Chart_Salary_Vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" />
 *Scatter plot mapping average salary against percentage of Data Analyst job postings each skill appears in.*
 
