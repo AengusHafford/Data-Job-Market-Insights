@@ -91,7 +91,6 @@ ORDER BY job_title_short, perc DESC;
 
 
 **Filtered to:** `Data Analyst`
-
 <img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:70%; height:auto;" />
 *Bar chart visualizing the top 10 skills by percentage of Data Analyst job postings they appear in.*
 
