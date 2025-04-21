@@ -94,6 +94,14 @@ ORDER BY job_title_short, perc DESC;
 <img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:70%; height:auto;" />
 *Bar chart visualizing the top 10 skills by percentage of Data Analyst job postings they appear in.*
 
+💡 **Key Insights:**
+
+- **SQL** is the most in-demand skill across nearly all roles, appearing in **52%** of *Data Analyst* postings and **39.12%** of *All Postings*.
+- Skills like **Excel**, **Python**, and **Tableau** are also highly prevalent among Data Analyst roles, with **Excel** specifically ranking second at **43.25%**.
+- While **Excel** and **SQL** are foundational, more specialized tools like **Tableau** (32.26%) and **Power BI** (24.48%) highlight the growing emphasis on data visualization.
+- Compared to the general job market, *Data Analyst* roles place significantly more emphasis on **Tableau** (+14.71 percentage points) and **Excel** (+14.57), while other roles prioritize a more diverse set of soft or general-purpose skills.
+- These distinctions reflect the technical focus of Data Analyst roles, and can help job seekers prioritize which tools to learn based on their target role.
+
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/686ab25a1d8542ec8e5d259c4f22440b1624fb9d/Job%20Analysis%20Prep/Demand_Percentage.sql)*
 <br>
 <br>
@@ -207,6 +215,15 @@ ORDER BY job_title_short, month_posted;
 <img src="Assets/Chart_Skill_Demand_Time.png" alt="Skill Demand Over Time Chart" style="max-width:70%; height:auto;" />
 *Line chart showing how demand for top 5 skills has changed month-to-month for Data Analysts.*
 
+💡 **Key Insights:**
+
+- Between **Dec 2022 and Dec 2023**, **GCP** (+1.48 percentage points), **Power BI** (+1.38pp), and **Scikit-learn** (+1.04pp) showed the strongest growth in demand across *All Postings* — hinting at broader adoption of cloud and ML tools.
+- Conversely, demand for **R** dropped significantly (−4.13pp), alongside declines in **Java** (−2.66pp) and **SAS** (−2.21pp), suggesting a shift away from traditional statistical tools in general job postings.
+- **SQL** remained the most in-demand skill across all months, and even saw a modest increase in share (+0.93pp), reinforcing its long-term importance.
+- Despite its dominance, **SQL** — along with **Python** and **R** — showed notable **month-to-month fluctuations**, suggesting these core skills may be influenced by project cycles or hiring seasonality rather than long-term decline.
+- In contrast, niche or legacy skills like **VMware**, **Powershell**, and **TypeScript** had extremely steady demand throughout the year, despite relatively low overall presence.
+
+
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Skill_Demand_over_Time.sql)*
 <br>
 <br>
@@ -275,6 +292,13 @@ ORDER BY job_title_short, avg_salary DESC;
 **Filtered to:** `Data Analyst`
 <img src="Assets/Chart_AVG_Skill_Salary.png" alt="Average Salary by Skill Chart" style="max-width:70%; height:auto;" />
 *Bar chart showing average salary associated with each in-demand skill for Data Analysts.*
+
+💡 **Key Insights:**
+
+- Across *All Postings*, the highest-paying skills are clustered around backend and infrastructure tools — including **Scala** ($145K), **Kafka** ($145K), **Airflow**, and **Spark** — all above $140K.
+- For *Data Engineers*, tools like **Spark**, **Snowflake**, and **Kafka** dominate the salary leaderboard — all above $147K — reinforcing the strong salary ceiling tied to cloud and big data platforms.
+- *Data Scientists* show a more ML-oriented salary profile, with **Scala**, **PyTorch**, and **Kubernetes** at the top — suggesting that low-level programming and model deployment experience are especially valuable.
+- *Data Analysts* still command strong pay for skills like **Jira**, **Snowflake**, and **Go**, but their top salaries trend slightly lower than those for more engineering-heavy roles.
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/AVG_Salary_Per_Skill.sql)*
 <br>
@@ -386,6 +410,14 @@ ORDER BY job_title_short, category;
 <img src="Assets/Chart_Remote_PCT.png" alt="Remote Job Percentages" style="max-width:70%; height:auto;" /> <br>
 *Bar chart showing the share of remote vs. non-remote postings - for Data Analysts.*
 
+💡 **Key Insights:**
+
+- While **91%** of all job postings are non-remote, roles like **Senior Data Engineer** (14.7% remote) and **Data Engineer** (11.4%) offer slightly higher flexibility — making them stand out in a largely in-office job market.
+- **Software Engineers** top the chart in education flexibility, with nearly **48.2%** of postings not mentioning a degree requirement. **Cloud Engineers** and **Data Engineers** follow closely at around 43–48%.
+- *Data Analysts*, while not leading in either category, still show notable accessibility: **38.7%** of roles lack a degree requirement, and **7.9%** are remote.
+- On the other end of the spectrum, roles like **Senior Data Scientist**, **Data Scientist**, and **Machine Learning Engineer** are among the most strict — with **over 92%** of listings mentioning a degree requirement.
+- 📈 **Seniority does make a difference**:  
+  Senior roles offer **slightly more remote flexibility** (11.0% vs. 7.8%) but tend to be **stricter on degree requirements** (28.5% vs. 31.0%).
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Remote_and_degree_PCT.sql)*
 <br>
@@ -432,6 +464,15 @@ ORDER BY avg_salary DESC;
 | All Postings    | 110401     | 106000         |
 
 </details>
+
+<img src="Assets/Chart_AVG_Salary_KPI.png" alt="Average Salary Per Title Chart" style="max-width:70%; height:auto;" />
+
+💡 **Key Insights:**
+
+- **Senior Data Scientist** is the top-paying title, with an average salary of **$154K**, slightly exceeding its median — suggesting consistent high compensation across postings.
+- Other high-paying roles include **Senior Data Engineer** ($146K) and **Data Scientist** ($136K), reinforcing the premium on advanced technical and modeling roles.
+- Titles like **Machine Learning Engineer** and **Cloud Engineer** show significant gaps between average and median salary (over $20K), indicating skewed distributions — likely driven by a subset of high-paying positions.
+- *Data Analyst* sits closer to the middle of the pack, with a median of **$100K** and an average of **$102.9K**, suggesting relatively balanced salary expectations compared to more variable roles like *Software Engineer* or *ML Engineer*.
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/AVG_Salary_Per_Title_KPI.sql)*
 <br>
