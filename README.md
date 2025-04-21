@@ -8,6 +8,7 @@
 # Tools I Used
 //
 <br>
+# The Analysis
 ### 📌 Skill Demand by Job Title
 
 **Question:**  
@@ -374,6 +375,12 @@ ORDER BY job_title_short, category;
 | All Postings     | No Degree Required   | 2371   | 25.27 |
 </details>
 
+**Filtered to:** `Data Analyst`
+
+<img src="Assets/Chart_Degree_PCT.png" alt="Degree Requirement Percentages" style="max-width:70%; height:auto;" />
+
+<img src="Assets/Chart_Remote_PCT.png" alt="Remote Job Percentages" style="max-width:70%; height:auto;" />
+
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Remote_and_degree_PCT.sql)*
 <br>
 <br>
@@ -421,6 +428,25 @@ ORDER BY avg_salary DESC;
 </details>
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/AVG_Salary_Per_Title_KPI.sql)*
+<br>
+<br>
+### 📌 Per-Skill Salary vs. Demand (Bonus Insight)
+
+**Question:**  
+Which skills offer the strongest balance between salary and demand?
+
+**Purpose:**  
+This scatterplot overlays the average salary for each skill against how frequently it's mentioned in job postings. It helps identify high-paying skills that are also in demand — useful for both career targeting and hiring insights.
+
+**Note:**  
+This visualization blends outputs from the following queries:  
+- 📌 *[Skill Demand by Job Title](#📌-skill-demand-by-job-title)*  
+- 📌 *[Average Salary by Skill](#📌-average-salary-by-skill)*  
+It was created directly in Tableau and does not use a standalone SQL file.
+
+**Filtered to:** `Data Analyst`  
+<img src="Assets/Chart_Salary_vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" />
+
 # What I learned
 //
 # Conclusions
