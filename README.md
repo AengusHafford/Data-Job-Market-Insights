@@ -93,7 +93,6 @@ ORDER BY job_title_short, perc DESC;
 **Filtered to:** `Data Analyst`
 
 <img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:70%; height:auto;" />
-
 *Bar chart visualizing the top 10 skills by percentage of Data Analyst job postings they appear in.*
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/686ab25a1d8542ec8e5d259c4f22440b1624fb9d/Job%20Analysis%20Prep/Demand_Percentage.sql)*
@@ -207,8 +206,7 @@ ORDER BY job_title_short, month_posted;
 
 **Filtered to:** `Data Analyst`
 <img src="Assets/Chart_Skill_Demand_Time.png" alt="Skill Demand Over Time Chart" style="max-width:70%; height:auto;" />
-
-*Line chart showing how demand for top 25 skills has changed month-to-month for Data Analysts.*
+*Line chart showing how demand for top 5 skills has changed month-to-month for Data Analysts.*
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Skill_Demand_over_Time.sql)*
 <br>
@@ -277,7 +275,6 @@ ORDER BY job_title_short, avg_salary DESC;
 
 **Filtered to:** `Data Analyst`
 <img src="Assets/Chart_AVG_Skill_Salary.png" alt="Average Salary by Skill Chart" style="max-width:70%; height:auto;" />
-
 *Bar chart showing average salary associated with each in-demand skill for Data Analysts.*
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/AVG_Salary_Per_Skill.sql)*
@@ -384,11 +381,9 @@ ORDER BY job_title_short, category;
 **Filtered to:** `Data Analyst`
 
 <img src="Assets/Chart_Degree_PCT.png" alt="Degree Requirement Percentages" style="max-width:70%; height:auto;" />
-
 *Chart showing percentage of postings that mention degree requirements vs. those that do not — for Data Analysts.*
 
 <img src="Assets/Chart_Remote_PCT.png" alt="Remote Job Percentages" style="max-width:70%; height:auto;" />
-
 *Bar chart showing the share of remote vs. non-remote postings - for Data Analysts.*
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Remote_and_degree_PCT.sql)*
@@ -457,8 +452,7 @@ It was created directly in Tableau and does not use a standalone SQL file.
 **Filtered to:** `Data Analyst`
 
 <img src="Assets/Chart_Salary_Vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" />
-
-*Scatter plot mapping average salary against percentage of job postings per skill.*
+*Scatter plot mapping average salary against percentage of Data Analyst job postings each skill appears in.*
 
 # What I learned
 //
