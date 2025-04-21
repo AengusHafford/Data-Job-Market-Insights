@@ -378,13 +378,14 @@ ORDER BY job_title_short, category;
 </details>
 
 **Filtered to:** `Data Analyst`
-<img src="Assets/Chart_Degree_PCT.png" alt="Degree Requirement Percentages" style="max-width:70%; height:auto;" />
-#
+<img src="Assets/Chart_Degree_PCT.png" alt="Degree Requirement Percentages" style="max-width:70%; height:auto;" /> <br>
 *Bar chart showing percentage of postings that mention degree requirements vs. those that do not — for Data Analysts.*
 <br>
-<img src="Assets/Chart_Remote_PCT.png" alt="Remote Job Percentages" style="max-width:70%; height:auto;" />
-#
+<br>
+<br>
+<img src="Assets/Chart_Remote_PCT.png" alt="Remote Job Percentages" style="max-width:70%; height:auto;" /> <br>
 *Bar chart showing the share of remote vs. non-remote postings - for Data Analysts.*
+
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Remote_and_degree_PCT.sql)*
 <br>
@@ -449,10 +450,10 @@ This visualization blends outputs from the following queries:
 - 📌 *[Average Salary by Skill](#📌-average-salary-by-skill)*  
 It was created directly in Tableau and does not use a standalone SQL file.
 
-**Filtered to:** `Data Analyst`
+**Filtered to:** `Data Analyst` <br>
+<img src="Assets/Chart_Salary_Vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" /> <br>
+*Scatter plot mapping average salary against percentage of Data Analyst job postings each skill appears in.*
 
-<img src="Assets/Chart_Salary_Vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" />
-<em>Scatter plot mapping average salary against percentage of Data Analyst job postings each skill appears in.</em></p>
 
 # What I learned
 //
