@@ -5,8 +5,8 @@ This project explores real-world data on job postings in the data and tech space
 The analysis uses a combination of SQL and Tableau to surface insights for job seekers, hiring managers, and anyone interested in the evolution of technical roles. Whether you're transitioning careers or sharpening your current trajectory, this project is designed to help identify what skills are most valuable — and where the market is headed.
 
 🔗 **Explore the SQL queries:** [Job Analysis Prep folder](https://github.com/AengusHafford/Project-SQL/tree/main/Job%20Analysis%20Prep)  
-📊 **View the interactive Tableau dashboard:** *Link coming soon*  
-📂 **Original dataset:** [Google Drive (provided by Luke Barousse)](https://drive.google.com/drive/folders/1moeWYoUtUklJO6NJdWo9OV8zWjRn0rjN)
+📊 **View the interactive Tableau dashboard:** [Data Job Market Dashboard](https://public.tableau.com/app/profile/aengus.hafford/viz/DataJobMarketDashboard/JobSkillAnalysisDashboard?publish=yes)        
+📂 **Original dataset:** [Google Drive (provided by Luke Barousse)](https://drive.google.com/drive/folders/1moeWYoUtUklJO6NJdWo9OV8zWjRn0rjN) 
 
 # Background
 
