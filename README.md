@@ -33,6 +33,8 @@ What are the most in-demand skills for each job title based on the percentage of
 **Purpose:**  
 This query calculates the percentage of postings that mention a specific skill for each job title — allowing us to rank the most relevant skills by role. An "All Postings" category is also included to show general trends across the entire dataset.
 
+<br>
+
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
 <details>
@@ -110,6 +112,8 @@ ORDER BY job_title_short, perc DESC;
 <img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:70%; height:auto;" />
 *Bar chart visualizing the top 10 skills by percentage of Data Analyst job postings they appear in.*
 
+<br>
+
 💡 **Key Insights:**
 
 - **SQL** is the most in-demand skill across nearly all roles, appearing in **52%** of *Data Analyst* postings and **39.12%** of *All Postings*.
@@ -130,6 +134,8 @@ How has the demand for the top 25 most in-demand skills changed over time by job
 
 **Purpose:**  
 This query tracks the monthly percentage of job postings that mention each of the top 25 skills, broken out by job title and aggregated across all postings. It helps visualize trends and shifts in skill relevance across roles and over time.
+
+<br>
 
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
@@ -231,6 +237,8 @@ ORDER BY job_title_short, month_posted;
 <img src="Assets/Chart_Skill_Demand_Time.png" alt="Skill Demand Over Time Chart" style="max-width:70%; height:auto;" />
 *Line chart showing how demand for top 5 skills has changed month-to-month for Data Analysts.*
 
+<br>
+
 💡 **Key Insights:**
 
 - Between **Dec 2022 and Dec 2023**, **GCP** (+1.48 percentage points), **Power BI** (+1.38pp), and **Scikit-learn** (+1.04pp) showed the strongest growth in demand across *All Postings* — hinting at broader adoption of cloud and ML tools.
@@ -250,6 +258,8 @@ Which of the top 25 most in-demand skills are associated with the highest averag
 
 **Purpose:**  
 This query joins salary data with skill demand to calculate the average salary for each of the top 25 skills per job title. An "All Postings" category is also included to show general trends in skill-value alignment across the entire job market.
+
+<br>
 
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
@@ -309,6 +319,8 @@ ORDER BY job_title_short, avg_salary DESC;
 <img src="Assets/Chart_AVG_Skill_Salary.png" alt="Average Salary by Skill Chart" style="max-width:70%; height:auto;" />
 *Bar chart showing average salary associated with each in-demand skill for Data Analysts.*
 
+<br>
+
 💡 **Key Insights:**
 
 - Across *All Postings*, the highest-paying skills are clustered around backend and infrastructure tools — including **Scala** ($145K), **Kafka** ($145K), **Airflow**, and **Spark** — all above $140K.
@@ -330,6 +342,8 @@ This query calculates two separate percentages for each job title (and overall):
 2. The share of postings that mention a degree requirement vs. those that do not  
 
 These breakdowns help illustrate how flexible different job roles are in terms of location and education expectations.
+
+<br>
 
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
@@ -426,6 +440,8 @@ ORDER BY job_title_short, category;
 <img src="Assets/Chart_Remote_PCT.png" alt="Remote Job Percentages" style="max-width:70%; height:auto;" /> <br>
 *Bar chart showing the share of remote vs. non-remote postings - for Data Analysts.*
 
+<br>
+
 💡 **Key Insights:**
 
 - While **91%** of all job postings are non-remote, roles like **Senior Data Engineer** (14.7% remote) and **Data Engineer** (11.4%) offer slightly higher flexibility — making them stand out in a largely in-office job market.
@@ -445,6 +461,8 @@ What is the average and median salary for each job title, and how does it compar
 
 **Purpose:**  
 This query calculates both the average and median salary for each job title in the dataset, including a benchmark value across all postings. It enables quick comparison of compensation levels by role.
+
+<br>
 
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
@@ -483,7 +501,9 @@ ORDER BY avg_salary DESC;
 
 <img src="Assets/Chart_AVG_Salary_KPI.png" alt="Average Salary Per Title Chart" style="max-width:70%; height:auto;" /> <br>
 *Bar chart showing the Average and Median salary per title.* <br>
+
 <br>
+
 💡 **Key Insights:**
 
 - **Senior Data Scientist** is the top-paying title, with an average salary of **$154K**, slightly exceeding its median — suggesting consistent high compensation across postings.
@@ -511,6 +531,7 @@ It was created directly in Tableau and does not use a standalone SQL file.
 **Filtered to:** `Data Analyst` <br>
 <img src="Assets/Chart_Salary_Vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" /> <br>
 *Scatter plot mapping average salary against percentage of Data Analyst job postings each skill appears in.*
+
 <br>
 
 💡 **Key Insights:**
