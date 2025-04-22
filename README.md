@@ -1,14 +1,30 @@
-//TEMP
-
-//NOTE Formatting is equivalent to obsidian
 # Introduction
-// ADD Introduction / summary of the project
+
+This project explores real-world data on job postings in the data and tech space — breaking down trends in skill demand, salary, education requirements, and remote work availability.
+
+The analysis uses a combination of SQL and Tableau to surface insights for job seekers, hiring managers, and anyone interested in the evolution of technical roles. Whether you're transitioning careers or sharpening your current trajectory, this project is designed to help identify what skills are most valuable — and where the market is headed.
+
+🔗 **Explore the SQL queries:** [Job Analysis Prep folder](https://github.com/AengusHafford/Project-SQL/tree/main/Job%20Analysis%20Prep)  
+📊 **View the interactive Tableau dashboard:** *Link coming soon*  
+📂 **Original dataset:** [Google Drive (provided by Luke Barousse)](https://drive.google.com/drive/folders/1moeWYoUtUklJO6NJdWo9OV8zWjRn0rjN)
+
 # Background
-//
+
+For those transitioning into data and analytics, it can be difficult to know where to focus your time. Which skills are in highest demand? Which roles offer flexibility or career growth? And what tools are truly worth learning?
+
+This project was built to help answer those questions. By analyzing thousands of job postings, I wanted to uncover concrete patterns that could help people — including myself — understand the market more clearly and build their skillset with purpose.
+
+Rather than relying on generic advice like “just learn SQL,” this project aims to show where those skills actually show up in the job market — and how they interact with titles, salaries, and expectations.
+
 # Tools I Used
-//
-<br>
+
+- **SQL (PostgreSQL):** to clean, transform, and analyze raw job posting data.
+- **Tableau Public:** for building visualizations and dashboards.
+- **VS Code + GitHub:** for query writing and version control.
+- **Excel:** for validating calculations and creating quick summaries.
+
 # The Analysis
+
 ### 📌 Skill Demand by Job Title
 
 **Question:**  
@@ -17,7 +33,7 @@ What are the most in-demand skills for each job title based on the percentage of
 **Purpose:**  
 This query calculates the percentage of postings that mention a specific skill for each job title — allowing us to rank the most relevant skills by role. An "All Postings" category is also included to show general trends across the entire dataset.
 
-💡 *Want to see the full SQL powering this chart? Click below to expand.*
+🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
 <details>
 <summary>View full SQL and output example</summary>
@@ -99,7 +115,7 @@ ORDER BY job_title_short, perc DESC;
 - **SQL** is the most in-demand skill across nearly all roles, appearing in **52%** of *Data Analyst* postings and **39.12%** of *All Postings*.
 - Skills like **Excel**, **Python**, and **Tableau** are also highly prevalent among Data Analyst roles, with **Excel** specifically ranking second at **43.25%**.
 - While **Excel** and **SQL** are foundational, more specialized tools like **Tableau** (32.26%) and **Power BI** (24.48%) highlight the growing emphasis on data visualization.
-- Compared to the general job market, *Data Analyst* roles place significantly more emphasis on **Tableau** (+14.71 percentage points) and **Excel** (+14.57), while other roles prioritize a more diverse set of soft or general-purpose skills.
+- Compared to the general job market, Data Analyst roles place significantly more emphasis on tools like **Tableau** (+14.7pp) and **Excel** (+14.6pp). Within the role itself, moving into senior positions further elevates the importance of **SQL**, **Python**, and **Tableau** — signaling that deeper technical fluency is often expected at higher levels.
 - These distinctions reflect the technical focus of Data Analyst roles, and can help job seekers prioritize which tools to learn based on their target role.
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/686ab25a1d8542ec8e5d259c4f22440b1624fb9d/Job%20Analysis%20Prep/Demand_Percentage.sql)*
@@ -115,7 +131,7 @@ How has the demand for the top 25 most in-demand skills changed over time by job
 **Purpose:**  
 This query tracks the monthly percentage of job postings that mention each of the top 25 skills, broken out by job title and aggregated across all postings. It helps visualize trends and shifts in skill relevance across roles and over time.
 
-💡 *Want to see the full SQL powering this chart? Click below to expand.*
+🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
 <details>
 <summary>View full SQL and output example</summary>
@@ -235,7 +251,7 @@ Which of the top 25 most in-demand skills are associated with the highest averag
 **Purpose:**  
 This query joins salary data with skill demand to calculate the average salary for each of the top 25 skills per job title. An "All Postings" category is also included to show general trends in skill-value alignment across the entire job market.
 
-💡 *Want to see the full SQL powering this chart? Click below to expand.*
+🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
 <details>
 <summary>View full SQL and output example</summary>
@@ -315,7 +331,7 @@ This query calculates two separate percentages for each job title (and overall):
 
 These breakdowns help illustrate how flexible different job roles are in terms of location and education expectations.
 
-💡 *Want to see the full SQL powering this chart? Click below to expand.*
+🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
 <details>
 <summary>View full SQL and output example</summary>
@@ -430,7 +446,7 @@ What is the average and median salary for each job title, and how does it compar
 **Purpose:**  
 This query calculates both the average and median salary for each job title in the dataset, including a benchmark value across all postings. It enables quick comparison of compensation levels by role.
 
-💡 *Want to see the full SQL powering this chart? Click below to expand.*
+🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
 <details>
 <summary>View full SQL and output example</summary>
@@ -495,9 +511,32 @@ It was created directly in Tableau and does not use a standalone SQL file.
 **Filtered to:** `Data Analyst` <br>
 <img src="Assets/Chart_Salary_Vs_Demand.png" alt="Salary vs Demand Chart" style="max-width:70%; height:auto;" /> <br>
 *Scatter plot mapping average salary against percentage of Data Analyst job postings each skill appears in.*
+<br>
 
+💡 **Key Insights:**
+
+- **Python** is uniquely positioned as both one of the **highest paying** and **most in-demand** skills across nearly all senior technical roles — especially *Senior Data Scientist*, *Senior Data Engineer*, and *Machine Learning Engineer*. It consistently ranks **top 5 in both salary and mention frequency**.
+- **SQL** remains a universally critical skill, particularly among analysts and engineers. While it offers slightly lower average salaries than cutting-edge tools, its **extremely high demand** (often above **60%** of postings) cements it as an **essential foundational skill** for career entry and progression.
+- **Spark**, **Scala**, and **Kafka** deliver **exceptionally strong salaries** (often **$150K+**) and appear frequently in *Senior Data Engineer* and *ML Engineer* roles. Though not as widely required as SQL or Python, their presence in **high-paying backend and infrastructure roles** makes them valuable upskilling targets.
+- Several senior-level *Data Scientist* postings emphasize tools like **Pytorch**, **TensorFlow**, and **Scikit-learn** — skills that, while less frequently mentioned, are often tied to the **highest average salaries in the dataset** (**$155K+**). These tools represent **high-leverage specialization paths** for those pursuing advanced ML roles.
+- **AWS** and **Azure** consistently appear in the **middle of the salary-demand balance**, offering **broad utility** across roles (*engineers, analysts, and scientists* alike). They serve as **strong complements to core programming and data skills**, especially for platform engineering and scalable analytics work.
 
 # What I learned
-//
+
+This project helped reinforce how much value strong fundamentals bring to a data role. Tools like SQL and Excel may not be flashy, but their presence across nearly every job title and salary tier drove home just how essential they are — not only for getting hired, but for understanding how data actually works in the real world.
+
+Working with real-world data also highlighted how messy, uneven, and unpredictable job postings can be. I had to think critically about how to define demand, normalize job titles, and deal with partial or missing salary data. These challenges were frustrating at times, but they also felt representative of actual problems you’d encounter on the job.
+
+It was also a great opportunity to level up my ability to think in terms of queries — not just for one-off answers, but for reusable views, KPIs, and metrics that could support a variety of visualizations.
+
+Lastly, building the Tableau dashboard pushed me to think more visually. Instead of just focusing on code, I had to consider what would make sense to a hiring manager or a fellow job seeker — and how to communicate something clearly in just a few clicks or glances.
+
 # Conclusions
-//
+
+The key takeaway from this project is that hiring trends aren't random — they reflect very real priorities in the workforce. If a skill consistently shows up in high-paying roles, or if it’s climbing in monthly demand, that’s a signal worth paying attention to.
+
+For career changers or early-stage professionals, this kind of analysis can help make learning more strategic. Instead of trying to “learn everything,” we can focus on the skills that show up in the jobs we actually want.
+
+At the same time, the data shows that no single skill is a silver bullet. Strong candidates often combine high-demand technical tools (like SQL and Python) with supporting strengths — whether that’s communication, cloud platforms, or data visualization.
+
+Ultimately, this project wasn’t just an exercise in querying or charting. It was a chance to better understand the space I’m moving into — and to help others do the same.
