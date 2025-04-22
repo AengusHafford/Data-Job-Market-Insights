@@ -465,8 +465,9 @@ ORDER BY avg_salary DESC;
 
 </details>
 
-<img src="Assets/Chart_AVG_Salary_KPI.png" alt="Average Salary Per Title Chart" style="max-width:70%; height:auto;" />
-
+<img src="Assets/Chart_AVG_Salary_KPI.png" alt="Average Salary Per Title Chart" style="max-width:70%; height:auto;" /> <br>
+*Bar chart showing the Average and Median salary per title.* <br>
+<br>
 💡 **Key Insights:**
 
 - **Senior Data Scientist** is the top-paying title, with an average salary of **$154K**, slightly exceeding its median — suggesting consistent high compensation across postings.
