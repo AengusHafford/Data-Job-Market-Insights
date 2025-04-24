@@ -41,25 +41,41 @@ This query calculates the percentage of postings that mention a specific skill f
 <summary>View full SQL and output example</summary>
 
 ```sql
+-- Skill Demand Percentage
+-- Purpose: Calculates the percentage of postings that mention a given skill,
+-- grouped by job title. Includes an "All Postings" aggregate for global trends,
+-- and ranks skills per title.
+
+-- Creating a view to simplify downstream queries via filtering,
+-- reduce result size, and improve performance for Tableau exports.
 CREATE VIEW skill_demand_percent AS
+
+-- Step 1: Calculate the total number of mentions per skill across all job postings,
+-- and what percentage of all postings each skill appears in.
 WITH demand_percent AS (
     SELECT
         skill_id,
-        COUNT(*) as per_skill_all,
-        ROUND((COUNT(*)::numeric / (SELECT COUNT(distinct job_id) FROM skills_job_dim)) * 100, 2) AS perc
+        COUNT(*) AS per_skill_total,  -- Total times the skill appears
+        ROUND((COUNT(*)::numeric / (SELECT COUNT(DISTINCT job_id) FROM skills_job_dim)) * 100, 2) AS pct  -- Global percentage
     FROM skills_job_dim
     GROUP BY skill_id
 ),
-total_perc AS (
+
+-- Assign a consistent "All Postings" label for global totals.
+-- This avoids Tableau's default aggregation logic when using 'All' in filters,
+-- which can distort percentages. The label acts as a controlled global baseline.
+total_pct AS (
     SELECT
         dp.skill_id,
         skills,
         'All Postings' AS job_title_short,
-        per_skill_all,
-        perc
+        per_skill_total,
+        pct
     FROM demand_percent dp
     INNER JOIN skills_dim sd ON dp.skill_id = sd.skill_id
 ),
+
+-- Count the number of job postings per title (used for normalization)
 total_posts_per_title AS (
     SELECT
         job_title_short,
@@ -67,6 +83,8 @@ total_posts_per_title AS (
     FROM job_postings_fact
     GROUP BY job_title_short
 ),
+
+-- Step 2: Count how many times each skill appears within each job title
 per_skill_count AS (
     SELECT
         skjd.skill_id,
@@ -76,25 +94,33 @@ per_skill_count AS (
     INNER JOIN job_postings_fact jpf ON skjd.job_id = jpf.job_id
     GROUP BY skjd.skill_id, jpf.job_title_short
 ),
-title_perc AS (
+
+-- Step 3: Calculate the % of postings per title that mention each skill
+title_pct AS (
     SELECT
         psc.skill_id,
         sd.skills,
         psc.job_title_short,
         psc.per_skill_total,
-        ROUND((psc.per_skill_total::numeric / tpt.total_postings) * 100, 2) AS perc
+        ROUND((psc.per_skill_total::numeric / tpt.total_postings) * 100, 2) AS pct
     FROM per_skill_count psc
     INNER JOIN total_posts_per_title tpt ON psc.job_title_short = tpt.job_title_short
     INNER JOIN skills_dim sd ON psc.skill_id = sd.skill_id
 )
-SELECT *, RANK() OVER(PARTITION BY job_title_short ORDER BY perc DESC) AS rnk
-FROM title_perc
+
+-- Final Output: Combine per-title and "All Postings" data
+-- Rank skills per title by their percentage of appearance
+SELECT *,
+    RANK() OVER (PARTITION BY job_title_short ORDER BY pct DESC) AS rnk
+FROM title_pct
 
 UNION ALL
 
-SELECT *, RANK() OVER(PARTITION BY job_title_short ORDER BY perc DESC) AS rnk
-FROM total_perc
-ORDER BY job_title_short, perc DESC;
+SELECT *,
+    RANK() OVER (PARTITION BY job_title_short ORDER BY pct DESC) AS rnk
+FROM total_pct
+
+ORDER BY job_title_short, pct DESC;
 ```
 
 **Output Format (Example):**
@@ -143,21 +169,30 @@ This query tracks the monthly percentage of job postings that mention each of th
 <summary>View full SQL and output example</summary>
 
 ```sql
-WITH month_test AS (
+-- Skill Demand Over Time
+-- Purpose: Tracks monthly percentage of job postings that mention each of the top 25 skills,
+-- broken down by job title and overall to track trends over time.
+
+-- Step 1: Assign each job posting to a month
+WITH month_mapping AS (
     SELECT
         job_id,
         CAST(DATE_TRUNC('month', job_posted_date) AS DATE) AS month_posted
     FROM job_postings_fact
 ),
+
+-- Step 2a: Count total job postings per job title, per month
 filter_posts AS (
     SELECT
         job_title_short, 
         month_posted,
         COUNT(DISTINCT jpf.job_id) as ttl_posts
     FROM job_postings_fact jpf
-    JOIN month_test ON jpf.job_id = month_test.job_id
+    JOIN month_mapping ON jpf.job_id = month_mapping.job_id
     GROUP BY job_title_short, month_posted
 ),
+
+-- Step 2b: Count job postings that mention each skill, per title, per month
 filter_skill_count AS (
     SELECT
         skill_id, 
@@ -166,25 +201,31 @@ filter_skill_count AS (
         COUNT(DISTINCT jpf.job_id) as skill_count
     FROM skills_job_dim sjd
     JOIN job_postings_fact jpf ON sjd.job_id = jpf.job_id
-    JOIN month_test ON jpf.job_id = month_test.job_id
+    JOIN month_mapping ON jpf.job_id = month_mapping.job_id
     GROUP BY skill_id, job_title_short, month_posted
 ),
+
+-- Step 3a: Count total job postings per month (all titles)
 all_posts AS (
     SELECT
         month_posted,
         COUNT(DISTINCT job_id) AS ttl_posts
-    FROM month_test
+    FROM month_mapping
     GROUP BY month_posted
 ),
+
+-- Step 3b: Count job postings that mention each skill per month (all titles)
 all_skill_counts AS (
     SELECT
         sjd.skill_id,
         month_posted,
         COUNT(DISTINCT sjd.job_id) AS skill_count
     FROM skills_job_dim sjd
-    JOIN month_test ON sjd.job_id = month_test.job_id
+    JOIN month_mapping ON sjd.job_id = month_mapping.job_id
     GROUP BY sjd.skill_id, month_posted
 ),
+
+-- Step 4a: Calculate per-skill percentage per job title, per month
 per_title_final AS (
     SELECT
         fsc.job_title_short,
@@ -199,9 +240,11 @@ per_title_final AS (
     WHERE fsc.skill_id IN (
         SELECT skill_id
         FROM skill_demand_percent
-        WHERE rnk <= 25
+        WHERE rnk <= 25 -- Limit to most relevant skills per title to reduce output size
     )
 ),
+
+-- Step 4b: "All Postings" used instead of Tableau's "All" filter to avoid distorted aggregation.
 all_postings_final AS (
     SELECT
         'All Postings' AS job_title_short,
@@ -211,15 +254,20 @@ all_postings_final AS (
     FROM all_skill_counts apf
     JOIN all_posts ap ON apf.month_posted = ap.month_posted
     JOIN skills_dim sd ON apf.skill_id = sd.skill_id
-    WHERE apf.skill_id IN (
+   WHERE apf.skill_id IN (
         SELECT skill_id
         FROM skill_demand_percent
-        WHERE rnk <= 25
+        WHERE rnk <= 25 -- Limit to most relevant skills per title to reduce output size
     )
 )
+
+-- Final output: combine per-title and global data for Tableau visualization
 SELECT * FROM per_title_final
+
 UNION ALL
+
 SELECT * FROM all_postings_final
+
 ORDER BY job_title_short, month_posted;
 ```
 
@@ -267,6 +315,12 @@ This query joins salary data with skill demand to calculate the average salary f
 <summary>View full SQL and output example</summary>
 
 ```sql
+-- Average Salary by Skill (Per Job Title)
+-- Purpose: Calculates average salaries for skills that rank in the top 25
+-- by demand *within each job title*, plus an "All Postings" benchmark
+-- for global comparison.
+
+-- Step 1: Per-title average salary for top-ranked skills
 WITH top_skills_salary AS (
     SELECT 
         sdp.job_title_short,
@@ -280,10 +334,13 @@ WITH top_skills_salary AS (
         AND jpf.job_title_short = sdp.job_title_short
     WHERE 
         jpf.salary_year_avg IS NOT NULL
-        AND sdp.rnk <= 25
+        AND sdp.rnk <= 25 -- Limit to most relevant skills per title to reduce output size
     GROUP BY 
         sdp.job_title_short, sd.skills
 ),
+
+-- Step 2: Global average salary for top-ranked skills (based on "All Postings" ranking)
+-- Used for overall benchmarking in Tableau
 all_postings_salary AS (
     SELECT
         'All Postings' AS job_title_short,
@@ -299,9 +356,14 @@ all_postings_salary AS (
     )
     GROUP BY sd.skills
 )
+
+-- Final output: combine job-title and global results
 SELECT * FROM top_skills_salary
+
 UNION ALL
+
 SELECT * FROM all_postings_salary
+
 ORDER BY job_title_short, avg_salary DESC;
 ```
 
@@ -351,6 +413,11 @@ These breakdowns help illustrate how flexible different job roles are in terms o
 <summary>View full SQL and output example</summary>
 
 ```sql
+-- Remote and Degree Requirement Percentages
+-- Purpose: Calculates the share of remote roles and postings that mention a degree requirement,
+-- grouped by job title. Adds an "All Postings" aggregate row for global benchmarking in Tableau.
+
+-- Step 1: Count categories per job title
 WITH counts AS (
     SELECT
         job_title_short,
@@ -358,10 +425,12 @@ WITH counts AS (
         COUNT(CASE WHEN job_work_from_home = FALSE THEN 1 END) AS non_remote_count,
         COUNT(CASE WHEN job_no_degree_mention = TRUE THEN 1 END) AS no_degree_count,
         COUNT(CASE WHEN job_no_degree_mention = FALSE THEN 1 END) AS degree_count,
-        COUNT(*) AS ttl_count
+        COUNT(*) AS ttl_count -- Total postings per title
     FROM job_postings_fact
     GROUP BY job_title_short
 ),
+
+-- Step 2: Add a global "All Postings" row by summing each category across titles
 all_postings AS (
     SELECT
         'All Postings' AS job_title_short,
@@ -372,11 +441,15 @@ all_postings AS (
         SUM(ttl_count) AS ttl_count
     FROM counts
 ),
+
+-- Step 3: Combine individual and global results
 combined_counts AS (
     SELECT * FROM counts
     UNION ALL
     SELECT * FROM all_postings
 ),
+
+-- Step 4: Transform into long format (one row per job title + category)
 long_format AS (
     SELECT 
         job_title_short,
@@ -412,6 +485,9 @@ long_format AS (
         ROUND(no_degree_count::numeric / ttl_count * 100, 2)
     FROM combined_counts
 )
+
+-- Final output: sorted long-format results by job title and category
+
 SELECT *
 FROM long_format
 ORDER BY job_title_short, category;
@@ -470,6 +546,11 @@ This query calculates both the average and median salary for each job title in t
 <summary>View full SQL and output example</summary>
 
 ```sql
+-- Average and Median Salary by Job Title
+-- Purpose: Calculates both average and median salaries per job title,
+-- with an additional "All Postings" row for benchmarking.
+
+-- Step 1: Per-title salary metrics
 SELECT
     job_title_short,
     ROUND(AVG(salary_year_avg), 0) AS avg_salary,
@@ -480,12 +561,15 @@ GROUP BY job_title_short
 
 UNION ALL
 
+-- Step 2: Global average and median for all postings (benchmark row)
 SELECT
     'All Postings' AS job_title_short,
     ROUND(AVG(salary_year_avg), 0) AS avg_salary,
     percentile_cont(0.5) WITHIN GROUP (ORDER BY salary_year_avg)::numeric(10, 0) AS median_salary
 FROM job_postings_fact
 WHERE salary_year_avg IS NOT NULL
+
+-- Final output: sort by average salary, descending
 ORDER BY avg_salary DESC;
 ```
 
