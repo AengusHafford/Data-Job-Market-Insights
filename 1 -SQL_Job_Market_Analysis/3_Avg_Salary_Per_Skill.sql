@@ -1,3 +1,9 @@
+-- Average Salary by Skill (Per Job Title)
+-- Purpose: Calculates average salaries for skills that rank in the top 25
+-- by demand *within each job title*, plus an "All Postings" benchmark
+-- for global comparison.
+
+-- Step 1: Per-title average salary for top-ranked skills
 WITH top_skills_salary AS (
     SELECT 
         sdp.job_title_short,
@@ -11,11 +17,13 @@ WITH top_skills_salary AS (
         AND jpf.job_title_short = sdp.job_title_short
     WHERE 
         jpf.salary_year_avg IS NOT NULL
-        AND sdp.rnk <= 25
+        AND sdp.rnk <= 25 -- Limit to most relevant skills per title to reduce output size
     GROUP BY 
         sdp.job_title_short, sd.skills
 ),
 
+-- Step 2: Global average salary for top-ranked skills (based on "All Postings" ranking)
+-- Used for overall benchmarking in Tableau
 all_postings_salary AS (
     SELECT
         'All Postings' AS job_title_short,
@@ -32,7 +40,11 @@ all_postings_salary AS (
     GROUP BY sd.skills
 )
 
+-- Final output: combine job-title and global results
 SELECT * FROM top_skills_salary
+
 UNION ALL
+
 SELECT * FROM all_postings_salary
+
 ORDER BY job_title_short, avg_salary DESC;
