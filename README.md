@@ -122,7 +122,7 @@ ORDER BY job_title_short, perc DESC;
 - Compared to the general job market, Data Analyst roles place significantly more emphasis on tools like **Tableau** (+14.7pp) and **Excel** (+14.6pp). Within the role itself, moving into senior positions further elevates the importance of **SQL**, **Python**, and **Tableau** — signaling that deeper technical fluency is often expected at higher levels.
 - These distinctions reflect the technical focus of Data Analyst roles, and can help job seekers prioritize which tools to learn based on their target role.
 
-🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/686ab25a1d8542ec8e5d259c4f22440b1624fb9d/Job%20Analysis%20Prep/Demand_Percentage.sql)*
+🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/684fbca5f773f9f8b8972c54c61fa773bdbe47bc/1%20-SQL_Job_Market_Analysis/1_Skill_Demand_View.sql)*
 <br>
 <br>
 ### 📌 Skill Demand Over Time
@@ -248,7 +248,7 @@ ORDER BY job_title_short, month_posted;
 - In contrast, niche or legacy skills like **VMware**, **Powershell**, and **TypeScript** had extremely steady demand throughout the year, despite relatively low overall presence.
 
 
-🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Skill_Demand_over_Time.sql)*
+🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/684fbca5f773f9f8b8972c54c61fa773bdbe47bc/1%20-SQL_Job_Market_Analysis/2_Skill_Demand_Over_Time.sql)*
 <br>
 <br>
 ### 📌 Average Salary by Skill
@@ -328,7 +328,7 @@ ORDER BY job_title_short, avg_salary DESC;
 - *Data Scientists* show a more ML-oriented salary profile, with **Scala**, **PyTorch**, and **Kubernetes** at the top — suggesting that low-level programming and model deployment experience are especially valuable.
 - *Data Analysts* still command strong pay for skills like **Jira**, **Snowflake**, and **Go**, but their top salaries trend slightly lower than those for more engineering-heavy roles.
 
-🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/AVG_Salary_Per_Skill.sql)*
+🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/684fbca5f773f9f8b8972c54c61fa773bdbe47bc/1%20-SQL_Job_Market_Analysis/3_Avg_Salary_Per_Skill.sql)*
 <br>
 <br>
 ### 📌 Remote and Degree Requirement Percentages
@@ -451,7 +451,7 @@ ORDER BY job_title_short, category;
 - 📈 **Seniority does make a difference**:  
   Senior roles offer **slightly more remote flexibility** (11.0% vs. 7.8%) but tend to be **stricter on degree requirements** (28.5% vs. 31.0%).
 
-🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/Remote_and_degree_PCT.sql)*
+🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/684fbca5f773f9f8b8972c54c61fa773bdbe47bc/1%20-SQL_Job_Market_Analysis/4_Remote_and_degree_Pct.sql)*
 <br>
 <br>
 ### 📌 Average and Median Salary by Job Title
@@ -511,7 +511,7 @@ ORDER BY avg_salary DESC;
 - Titles like **Machine Learning Engineer** and **Cloud Engineer** show significant gaps between average and median salary (over $20K), indicating skewed distributions — likely driven by a subset of high-paying positions.
 - *Data Analyst* sits closer to the middle of the pack, with a median of **$100K** and an average of **$102.9K**, suggesting relatively balanced salary expectations compared to more variable roles like *Software Engineer* or *ML Engineer*.
 
-🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Project-SQL/blob/dfb87f05eab6fb890672bbb88b580aebab1b091c/Job%20Analysis%20Prep/AVG_Salary_Per_Title_KPI.sql)*
+🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/main/1%20-SQL_Job_Market_Analysis/5_Avg_Salary_Per_Title_KPI.sql)*
 <br>
 <br>
 ### 📌 Per-Skill Salary vs. Demand (Bonus Insight)
