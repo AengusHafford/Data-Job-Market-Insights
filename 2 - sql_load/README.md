@@ -10,7 +10,7 @@ While the core of this project focuses on querying and visualizing job data, thi
 
 ## 📂 Folder Contents
 
-### `1_create_database.sql`
+### [1_create_database.sql](1_create_database.sql)
 Creates the PostgreSQL database.
 
 ```sql
@@ -20,7 +20,7 @@ CREATE DATABASE data_jobs_db;
 
 ---
 
-### `2_create_tables.sql`
+### [2_create_tables.sql](2_create_tables.sql)
 Creates the core tables:
 - `company_dim`
 - `skills_dim`
@@ -34,7 +34,7 @@ Includes:
 
 ---
 
-### `3_load_data.sql`
+### [3_load_data.sql](3_load_data.sql)
 Used to load CSV data into the database using `COPY` statements.
 
 > ⚠️ **Important**: These file paths are placeholders.
