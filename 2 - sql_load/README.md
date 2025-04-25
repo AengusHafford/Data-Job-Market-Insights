@@ -1,3 +1,4 @@
+![test](Assets/Chart_AVG_Salary_KPI.png)
 # SQL Load Setup
 
 This folder contains the scripts used to set up the PostgreSQL database that powers the rest of the analysis in this project.
