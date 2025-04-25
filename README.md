@@ -35,8 +35,6 @@ What are the most in-demand skills for each job title based on the percentage of
 **Purpose:**  
 This query calculates the percentage of postings that mention a specific skill for each job title — allowing us to rank the most relevant skills by role. An "All Postings" category is also included to show general trends across the entire dataset.
 
-<br>
-
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
 <details>
@@ -140,7 +138,7 @@ ORDER BY job_title_short, pct DESC;
 <br>
 
 **Filtered to:** `Data Analyst`
-<img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:70%; height:auto;" />
+<img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:10%; max-height:10%;" />
 *Bar chart visualizing the top 10 skills by percentage of Data Analyst job postings they appear in.*
 
 <br>
@@ -154,8 +152,8 @@ ORDER BY job_title_short, pct DESC;
 - These distinctions reflect the technical focus of Data Analyst roles, and can help job seekers prioritize which tools to learn based on their target role.
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/684fbca5f773f9f8b8972c54c61fa773bdbe47bc/1%20-SQL_Job_Market_Analysis/1_Skill_Demand_View.sql)*
-<br>
-<br>
+
+---
 ### 📌 Skill Demand Over Time
 
 
@@ -165,8 +163,6 @@ How has the demand for the top 25 most in-demand skills changed over time by job
 
 **Purpose:**  
 This query tracks the monthly percentage of job postings that mention each of the top 25 skills, broken out by job title and aggregated across all postings. It helps visualize trends and shifts in skill relevance across roles and over time.
-
-<br>
 
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
@@ -306,8 +302,8 @@ ORDER BY job_title_short, month_posted;
 
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/684fbca5f773f9f8b8972c54c61fa773bdbe47bc/1%20-SQL_Job_Market_Analysis/2_Skill_Demand_Over_Time.sql)*
-<br>
-<br>
+
+---
 ### 📌 Average Salary by Skill
 
 **Question:**  
@@ -315,8 +311,6 @@ Which of the top 25 most in-demand skills are associated with the highest averag
 
 **Purpose:**  
 This query joins salary data with skill demand to calculate the average salary for each of the top 25 skills per job title. An "All Postings" category is also included to show general trends in skill-value alignment across the entire job market.
-
-<br>
 
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
@@ -404,8 +398,8 @@ ORDER BY job_title_short, avg_salary DESC;
 - *Data Analysts* still command strong pay for skills like **Jira**, **Snowflake**, and **Go**, but their top salaries trend slightly lower than those for more engineering-heavy roles.
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/684fbca5f773f9f8b8972c54c61fa773bdbe47bc/1%20-SQL_Job_Market_Analysis/3_Avg_Salary_Per_Skill.sql)*
-<br>
-<br>
+
+---
 ### 📌 Remote and Degree Requirement Percentages
 
 **Question:**  
@@ -417,8 +411,6 @@ This query calculates two separate percentages for each job title (and overall):
 2. The share of postings that mention a degree requirement vs. those that do not  
 
 These breakdowns help illustrate how flexible different job roles are in terms of location and education expectations.
-
-<br>
 
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
@@ -546,8 +538,8 @@ ORDER BY job_title_short, category;
   Senior roles offer **slightly more remote flexibility** (11.0% vs. 7.8%) but tend to be **stricter on degree requirements** (28.5% vs. 31.0%).
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/684fbca5f773f9f8b8972c54c61fa773bdbe47bc/1%20-SQL_Job_Market_Analysis/4_Remote_and_degree_Pct.sql)*
-<br>
-<br>
+
+---
 ### 📌 Average and Median Salary by Job Title
 
 **Question:**  
@@ -555,8 +547,6 @@ What is the average and median salary for each job title, and how does it compar
 
 **Purpose:**  
 This query calculates both the average and median salary for each job title in the dataset, including a benchmark value across all postings. It enables quick comparison of compensation levels by role.
-
-<br>
 
 🔍 *Want to see the full SQL powering this chart? Click below to expand.*
 
@@ -618,8 +608,8 @@ ORDER BY avg_salary DESC;
 - *Data Analyst* sits closer to the middle of the pack, with a median of **$100K** and an average of **$102.9K**, suggesting relatively balanced salary expectations compared to more variable roles like *Software Engineer* or *ML Engineer*.
 
 🔗 *[View this query as a standalone `.sql` file →](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/main/1%20-SQL_Job_Market_Analysis/5_Avg_Salary_Per_Title_KPI.sql)*
-<br>
-<br>
+
+---
 ### 📌 Per-Skill Salary vs. Demand (Bonus Insight)
 
 **Question:**  
