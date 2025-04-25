@@ -1,0 +1,270 @@
+job_title_short,skills,avg_salary
+All Postings,airflow,142386
+All Postings,aws,136481
+All Postings,azure,130433
+All Postings,databricks,131525
+All Postings,docker,132040
+All Postings,excel,99751
+All Postings,gcp,131738
+All Postings,git,128316
+All Postings,go,131689
+All Postings,hadoop,138574
+All Postings,java,136210
+All Postings,kafka,144754
+All Postings,nosql,137039
+All Postings,oracle,115125
+All Postings,power bi,106738
+All Postings,python,132440
+All Postings,r,127115
+All Postings,sas,112788
+All Postings,scala,145120
+All Postings,snowflake,137960
+All Postings,spark,141734
+All Postings,sql,124935
+All Postings,sql server,112487
+All Postings,tableau,116796
+Business Analyst,aws,105996
+Business Analyst,azure,103836
+Business Analyst,dax,96950
+Business Analyst,excel,87212
+Business Analyst,flow,92445
+Business Analyst,go,105701
+Business Analyst,java,89202
+Business Analyst,jira,81578
+Business Analyst,looker,110581
+Business Analyst,oracle,93139
+Business Analyst,outlook,80974
+Business Analyst,power bi,92059
+Business Analyst,powerpoint,88182
+Business Analyst,python,104277
+Business Analyst,qlik,79586
+Business Analyst,r,105969
+Business Analyst,sap,86547
+Business Analyst,sas,100308
+Business Analyst,snowflake,112543
+Business Analyst,sql,95292
+Business Analyst,sql server,89868
+Business Analyst,tableau,98794
+Business Analyst,vba,88794
+Business Analyst,word,87075
+Cloud Engineer,ansible,125253
+Cloud Engineer,aws,104171
+Cloud Engineer,azure,102208
+Cloud Engineer,bash,89400
+Cloud Engineer,databricks,136300
+Cloud Engineer,docker,109893
+Cloud Engineer,excel,68840
+Cloud Engineer,gcp,99857
+Cloud Engineer,git,89460
+Cloud Engineer,github,154800
+Cloud Engineer,go,145934
+Cloud Engineer,java,135925
+Cloud Engineer,javascript,133924
+Cloud Engineer,jenkins,116714
+Cloud Engineer,kafka,128614
+Cloud Engineer,kubernetes,119951
+Cloud Engineer,linux,104971
+Cloud Engineer,oracle,56700
+Cloud Engineer,powershell,77400
+Cloud Engineer,python,111594
+Cloud Engineer,spark,132054
+Cloud Engineer,sql,128678
+Cloud Engineer,terraform,113375
+Cloud Engineer,vmware,73350
+Cloud Engineer,windows,75980
+Data Analyst,aws,106440
+Data Analyst,azure,105400
+Data Analyst,excel,86419
+Data Analyst,flow,98020
+Data Analyst,go,97267
+Data Analyst,java,100214
+Data Analyst,jira,107931
+Data Analyst,looker,103855
+Data Analyst,oracle,100964
+Data Analyst,power bi,92324
+Data Analyst,powerpoint,88316
+Data Analyst,python,101512
+Data Analyst,qlik,100933
+Data Analyst,r,98708
+Data Analyst,sap,92446
+Data Analyst,sas,93707
+Data Analyst,snowflake,111578
+Data Analyst,spark,113002
+Data Analyst,spss,85293
+Data Analyst,sql,96435
+Data Analyst,sql server,96191
+Data Analyst,tableau,97978
+Data Analyst,vba,93845
+Data Analyst,word,82941
+Data Engineer,airflow,137262
+Data Engineer,aws,134072
+Data Engineer,azure,129152
+Data Engineer,databricks,128180
+Data Engineer,docker,132719
+Data Engineer,gcp,126594
+Data Engineer,git,126869
+Data Engineer,hadoop,135679
+Data Engineer,java,137307
+Data Engineer,kafka,143086
+Data Engineer,kubernetes,140092
+Data Engineer,linux,127769
+Data Engineer,nosql,136547
+Data Engineer,oracle,120759
+Data Engineer,power bi,119904
+Data Engineer,pyspark,132750
+Data Engineer,python,132107
+Data Engineer,r,121135
+Data Engineer,redshift,139527
+Data Engineer,scala,143161
+Data Engineer,snowflake,137426
+Data Engineer,spark,136136
+Data Engineer,sql,128461
+Data Engineer,sql server,119235
+Data Engineer,tableau,123399
+Data Scientist,aws,138861
+Data Scientist,azure,132897
+Data Scientist,c++,134698
+Data Scientist,databricks,135491
+Data Scientist,docker,129521
+Data Scientist,excel,124593
+Data Scientist,gcp,141092
+Data Scientist,git,123277
+Data Scientist,go,147466
+Data Scientist,hadoop,136429
+Data Scientist,java,130701
+Data Scientist,numpy,136720
+Data Scientist,pandas,138269
+Data Scientist,power bi,118603
+Data Scientist,python,138049
+Data Scientist,pytorch,145989
+Data Scientist,r,135165
+Data Scientist,sas,122910
+Data Scientist,scala,145056
+Data Scientist,scikit-learn,141777
+Data Scientist,spark,144399
+Data Scientist,sql,138430
+Data Scientist,tableau,131636
+Data Scientist,tensorflow,143440
+Machine Learning Engineer,airflow,144821
+Machine Learning Engineer,aws,129832
+Machine Learning Engineer,azure,119893
+Machine Learning Engineer,c++,121363
+Machine Learning Engineer,databricks,132198
+Machine Learning Engineer,docker,129329
+Machine Learning Engineer,gcp,134617
+Machine Learning Engineer,git,123278
+Machine Learning Engineer,go,131067
+Machine Learning Engineer,hadoop,139614
+Machine Learning Engineer,java,137184
+Machine Learning Engineer,kafka,132143
+Machine Learning Engineer,keras,122580
+Machine Learning Engineer,kubernetes,133817
+Machine Learning Engineer,linux,114800
+Machine Learning Engineer,numpy,131226
+Machine Learning Engineer,pandas,129913
+Machine Learning Engineer,python,129781
+Machine Learning Engineer,pytorch,133475
+Machine Learning Engineer,r,112634
+Machine Learning Engineer,scala,157451
+Machine Learning Engineer,scikit-learn,125570
+Machine Learning Engineer,spark,138904
+Machine Learning Engineer,sql,136859
+Machine Learning Engineer,tensorflow,133798
+Senior Data Analyst,alteryx,108542
+Senior Data Analyst,aws,122668
+Senior Data Analyst,azure,119279
+Senior Data Analyst,excel,105495
+Senior Data Analyst,flow,109178
+Senior Data Analyst,go,121705
+Senior Data Analyst,hadoop,119348
+Senior Data Analyst,jira,115339
+Senior Data Analyst,looker,121147
+Senior Data Analyst,oracle,113685
+Senior Data Analyst,power bi,109139
+Senior Data Analyst,powerpoint,99520
+Senior Data Analyst,python,119402
+Senior Data Analyst,qlik,106425
+Senior Data Analyst,r,117259
+Senior Data Analyst,sap,101824
+Senior Data Analyst,sas,112827
+Senior Data Analyst,snowflake,115572
+Senior Data Analyst,spark,132649
+Senior Data Analyst,sql,115025
+Senior Data Analyst,sql server,112120
+Senior Data Analyst,tableau,113467
+Senior Data Analyst,vba,107404
+Senior Data Analyst,word,99869
+Senior Data Engineer,airflow,148477
+Senior Data Engineer,aws,150197
+Senior Data Engineer,azure,146765
+Senior Data Engineer,databricks,136995
+Senior Data Engineer,docker,146471
+Senior Data Engineer,gcp,141123
+Senior Data Engineer,git,139641
+Senior Data Engineer,hadoop,153628
+Senior Data Engineer,java,151468
+Senior Data Engineer,kafka,154923
+Senior Data Engineer,kubernetes,150748
+Senior Data Engineer,mysql,158864
+Senior Data Engineer,nosql,154714
+Senior Data Engineer,oracle,133199
+Senior Data Engineer,power bi,135424
+Senior Data Engineer,pyspark,142208
+Senior Data Engineer,python,148771
+Senior Data Engineer,redshift,156521
+Senior Data Engineer,scala,153975
+Senior Data Engineer,snowflake,153597
+Senior Data Engineer,spark,151854
+Senior Data Engineer,sql,146105
+Senior Data Engineer,sql server,130750
+Senior Data Engineer,tableau,139349
+Senior Data Engineer,terraform,142176
+Senior Data Scientist,aws,150557
+Senior Data Scientist,azure,143855
+Senior Data Scientist,databricks,156029
+Senior Data Scientist,docker,145751
+Senior Data Scientist,excel,139296
+Senior Data Scientist,gcp,141991
+Senior Data Scientist,git,153732
+Senior Data Scientist,go,168254
+Senior Data Scientist,hadoop,158518
+Senior Data Scientist,java,152519
+Senior Data Scientist,numpy,151845
+Senior Data Scientist,pandas,155137
+Senior Data Scientist,power bi,132215
+Senior Data Scientist,python,154960
+Senior Data Scientist,pytorch,159627
+Senior Data Scientist,r,151480
+Senior Data Scientist,sas,135066
+Senior Data Scientist,scala,150890
+Senior Data Scientist,scikit-learn,159425
+Senior Data Scientist,snowflake,148031
+Senior Data Scientist,spark,164094
+Senior Data Scientist,sql,154285
+Senior Data Scientist,tableau,146861
+Senior Data Scientist,tensorflow,156255
+Software Engineer,aws,120502
+Software Engineer,azure,113856
+Software Engineer,c#,112873
+Software Engineer,c++,128525
+Software Engineer,docker,106067
+Software Engineer,excel,104515
+Software Engineer,gcp,112875
+Software Engineer,git,109085
+Software Engineer,go,142748
+Software Engineer,java,113141
+Software Engineer,javascript,114526
+Software Engineer,jenkins,117378
+Software Engineer,kafka,127329
+Software Engineer,kubernetes,110222
+Software Engineer,linux,111317
+Software Engineer,mysql,90865
+Software Engineer,nosql,113337
+Software Engineer,oracle,102002
+Software Engineer,python,118825
+Software Engineer,react,130953
+Software Engineer,spark,115754
+Software Engineer,sql,105966
+Software Engineer,terraform,112905
+Software Engineer,typescript,133581
+Software Engineer,windows,89180
