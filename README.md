@@ -7,7 +7,7 @@ The analysis uses a combination of SQL and Tableau to surface insights for job s
 🔗 **Explore the SQL queries:** [Job Market Analysis folder](https://github.com/AengusHafford/Data-Job-Market-Insights/tree/c6fa4dfc24621c53a9639b511fd3f7bdb22a1b09/1%20-SQL_Job_Market_Analysis)  
 📊 **View the interactive Tableau dashboard:** [Data Job Market Dashboard](https://public.tableau.com/app/profile/aengus.hafford/viz/DataJobMarketDashboard/JobSkillAnalysisDashboard?publish=yes)        
 📂 **Original dataset:** [Google Drive (provided by Luke Barousse)](https://drive.google.com/drive/folders/1moeWYoUtUklJO6NJdWo9OV8zWjRn0rjN)    
-🗃️ **Understand the setup and schema:** [SQL Load Setup folder](2-sql_load/)
+🗃️ **Understand the setup and schema:** [SQL Load Setup folder](https://github.com/AengusHafford/Data-Job-Market-Insights/tree/86f823a5381ac686a98295b3ee2f68307d8f4caf/2%20-%20sql_load)
 
 # Background
 
