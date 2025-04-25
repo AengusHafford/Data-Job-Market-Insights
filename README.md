@@ -132,8 +132,11 @@ ORDER BY job_title_short, pct DESC;
 | Data Analyst    | Excel  | 43.25 | 2   |
 | All Postings    | SQL    | 39.12 | 1   |
 
-</details>
+📁 [View full output CSV](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/2eefed05d84fc85aaef046089ccea94e629b50c6/3%20-%20Query_Results/1_Skill_Demand_Results.csv)
 
+
+</details>
+<br>
 
 **Filtered to:** `Data Analyst`
 <img src="Assets/Chart_Skill_Demand_PCT.png" alt="Skill Demand Chart" style="max-width:70%; height:auto;" />
@@ -280,7 +283,11 @@ ORDER BY job_title_short, month_posted;
 | Data Analyst    | 2024-06-01    | Excel  | 39.21      |
 | All Postings    | 2024-06-01    | Python | 26.04      |
 
+📁 [View full output CSV](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/2eefed05d84fc85aaef046089ccea94e629b50c6/3%20-%20Query_Results/2_Skill_Demand_Over_Time_Results.csv)
+
+
 </details>
+<br>
 
 **Filtered to:** `Data Analyst`
 <img src="Assets/Chart_Skill_Demand_Time.png" alt="Skill Demand Over Time Chart" style="max-width:70%; height:auto;" />
@@ -376,7 +383,11 @@ ORDER BY job_title_short, avg_salary DESC;
 | Data Engineer   | Kafka    | 149000     |
 | All Postings    | Python   | 132000     |
 
+📁 [View full output CSV](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/2eefed05d84fc85aaef046089ccea94e629b50c6/3%20-%20Query_Results/3_Avg_Salary_Per_Skill_Results.csv)
+
+
 </details>
+<br>
 
 **Filtered to:** `Data Analyst`
 <img src="Assets/Chart_AVG_Skill_Salary.png" alt="Average Salary by Skill Chart" style="max-width:70%; height:auto;" />
@@ -506,7 +517,12 @@ ORDER BY job_title_short, category;
 | All Postings     | Non-Remote           | 5942   | 63.55 |
 | All Postings     | Degree Required      | 7001   | 74.73 |
 | All Postings     | No Degree Required   | 2371   | 25.27 |
+
+📁 [View full output CSV](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/2eefed05d84fc85aaef046089ccea94e629b50c6/3%20-%20Query_Results/4_Remote_and_degree_Pct_Results.csv)
+
+
 </details>
+<br>
 
 **Filtered to:** `Data Analyst`
 <img src="Assets/Chart_Degree_PCT.png" alt="Degree Requirement Percentages" style="max-width:70%; height:auto;" /> <br>
@@ -582,7 +598,11 @@ ORDER BY avg_salary DESC;
 | Data Analyst    | 102856     | 100000         |
 | All Postings    | 110401     | 106000         |
 
+📁 [View full output CSV](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/2eefed05d84fc85aaef046089ccea94e629b50c6/3%20-%20Query_Results/5_Avg_Salary_Per_Title_KPI_Results.csv)
+
+
 </details>
+<br>
 
 <img src="Assets/Chart_AVG_Salary_KPI.png" alt="Average Salary Per Title Chart" style="max-width:70%; height:auto;" /> <br>
 *Bar chart showing the Average and Median salary per title.* <br>
