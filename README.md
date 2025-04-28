@@ -131,6 +131,7 @@ ORDER BY job_title_short, pct DESC;
 | Data Analyst    | Excel  | 43.25 | 2   |
 | All Postings    | SQL    | 39.12 | 1   |
 
+
 📁 [View full output CSV](https://github.com/AengusHafford/Data-Job-Market-Insights/blob/2eefed05d84fc85aaef046089ccea94e629b50c6/3%20-%20Query_Results/1_Skill_Demand_Results.csv)
 
 
